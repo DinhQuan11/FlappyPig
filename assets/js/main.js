@@ -57,7 +57,7 @@ window.onload = () => {
 
   // load image
   birdImg = new Image();
-  birdImg.src = "assets/images/pig.png";
+  birdImg.src = "../assets/images/pig.png";
   birdImg.onload = () => {
     context.drawImage(birdImg, bird.x, bird.y, bird.width, bird.height);
   };
@@ -66,7 +66,7 @@ window.onload = () => {
   topPipeImg.src = "../assets/images/toppipe.png";
 
   bottomPipeImg = new Image();
-  bottomPipeImg.src = "../../assets/images/bottompipe.png";
+  bottomPipeImg.src = "../assets/images/bottompipe.png";
 
   requestAnimationFrame(update);
   setInterval(placePipes, 1000);
