@@ -57,13 +57,13 @@ window.onload = () => {
 
   // load image
   birdImg = new Image();
-  birdImg.src = "./FlappyPig/assets/images/pig.png";
+  birdImg.src = "../../../FlappyPig/assets/images/pig.png";
   birdImg.onload = () => {
     context.drawImage(birdImg, bird.x, bird.y, bird.width, bird.height);
   };
 
   topPipeImg = new Image();
-  topPipeImg.src = "/FlappyPig/assets/images/toppipe.png";
+  topPipeImg.src = "../../../FlappyPig/assets/images/toppipe.png";
 
   bottomPipeImg = new Image();
   bottomPipeImg.src = "../../../FlappyPig/assets/images/bottompipe.png";
