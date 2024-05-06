@@ -57,16 +57,16 @@ window.onload = () => {
 
   // load image
   birdImg = new Image();
-  birdImg.src = "../images/pig.png";
+  birdImg.src = "../../assets/images/pig.png";
   birdImg.onload = () => {
     context.drawImage(birdImg, bird.x, bird.y, bird.width, bird.height);
   };
 
   topPipeImg = new Image();
-  topPipeImg.src = "../images/toppipe.png";
+  topPipeImg.src = "../../assets/images/toppipe.png";
 
   bottomPipeImg = new Image();
-  bottomPipeImg.src = "../images/bottompipe.png";
+  bottomPipeImg.src = "../../assets/images/bottompipe.png";
 
   requestAnimationFrame(update);
   setInterval(placePipes, 1000);
@@ -156,15 +156,6 @@ function update() {
   while (pipeArray.length > 0 && pipeArray[0].x < 0 - pipeWidth) {
     pipeArray.shift(); // remove first element from the array
   }
-
-  //score
-  var gameScore = $(".game-score");
-  if (!gameScore) {
-    var gameScore = document.createElement("h1");
-    gameScore.classList.add("game-score");
-    container.appendChild(gameScore);
-  }
-  gameScore.textContent = `Score: ${score}`;
 
   updateScoreDisplay();
 
